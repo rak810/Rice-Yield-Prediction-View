@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h3>Rice Yield Prediction</h3>
+      <ul>
+        <li><a href="index.html">Rice Yield</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="ndvi.html">NDVI</a></li>
+      </ul>
+    </nav>
+    <article>
+      <div class="grid-container">
+        <form action="" class="grid-item grid-item-1">
+            <div class="form-group form-item-1">
+                <label for="district">District</label>
+                <select class="select-css" id="dist" name="district">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+            </div>
+            <div class="form-group form-item-2">
+                <label for="year">Year</label>
+                <input type="text" id="year" name="year" placeholder="Enter Year" />
+            </div>
+            <div class="form-group form-item-3">
+                <label for="land">Land Area (Hectares)</label>
+                <input
+                  type="text"
+                  id="land"
+                  name="land"
+                  placeholder="Enter Land Area"
+                />
+            </div>
+             <input type="button"  class="form-item-4 btn" value="Predict" />
+            <div class="form-group form-item-5">
+              <label for="type">Season type</label>
+              <select class="select-css" id="type" name="type">
+                <option value="Aus">Aus</option>
+                <option value="Aman">Aman</option>
+                <option value="Boro">Boro</option>
+              </select>
+            </div>
+        
+        </form>
+        <div class="grid-item-3"> <h2>Result</h2> </div>
+        <div id="loading"></div>
+        <div class="grid-item grid-item-2 hidden">
+          <table class="card card-1">
+            <tr>
+              <td>District</td>
+              <td colspan="2" class="location">Dhaka</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Geo Location</td>
+              <td>Latitude</td>
+              <td >Longitude</td>
+            </tr>
+            <tr>
+                <td class="long">190 deg</td>
+                <td class="lat"> deg</td>
+            </tr>
+          </table>
+          <table class="card card-2">
+            <tr>
+              <td>Rain</td>
+              <td class="rain">3434 deg</td>
+            </tr>
+            <tr>
+              <td>Relative Humidity</td>
+              <td class="rel-hum">34 deg</td>
+            </tr>
+            <tr>
+              <td>Cloud Coverage</td>
+              <td class="cloud">45 deg</td>
+            </tr>
+            <tr>
+              <td>Average Sunshine</td>
+              <td class="sun">43545 deg</td>
+            </tr>
+            <tr>
+              <td>Average Temperature</td>
+              <td class="temp">456 deg</td>
+            </tr>
+            <tr>
+              <td>NDVI</td>
+              <td class="ndvi">0.458</td>
+            </tr>
+          </table>
+          <table class="card card-3">
+              <tr>
+                  <td>Land Area</td>
+                  <td class="area">100 hectares</td>
+              </tr>
+              <tr>
+                  <td>Type</td>
+                  <td class="type">Aman</td>
+              </tr>
+              <tr>
+                  <td>Predicted Yield</td>
+                  <td class="pred">20000 m.ton</td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </article>
+    <script src="js/template.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

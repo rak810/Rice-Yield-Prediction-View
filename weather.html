@@ -1,0 +1,51 @@
+<!-- https://rice-yield-prediction-api.herokuapp.com/predict/weather
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h3>Rice Yield Prediction</h3>
+        <ul>
+            <li><a href="index.html">Rice Yield</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="ndvi.html">NDVI</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div id="loading"></div>
+        <div class="header hidden">
+            <h2>Weather Data</h2>
+            <p>Yearly Average Weather From 2011 to 2020</p>
+        </div>
+        <table class="table hidden">
+            <thead>
+                <tr>
+                    <td>District</td>
+                    <td>Year</td>
+                    <td>Average Temperature</td>
+                    <td>Average Rainfall</td>
+                    <td>Average Relative Humidity</td>
+                    <td>Average Cloud Coverage</td>
+                    <td>Average Sunshine</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </article>
+    <script src="js/template.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

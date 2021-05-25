@@ -1,0 +1,67 @@
+<!-- https://rice-yield-prediction-api.herokuapp.com/predict/weather
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="css/ndvi.css">
+ </head>
+ 
+ <body>
+     <nav class="navbar">
+         <h3>Rice Yield Prediction</h3>
+         <ul>
+             <li><a href="index.html">Rice Yield</a></li>
+             <li><a href="weather.html">Weather</a></li>
+             <li><a href="ndvi.html">NDVI</a></li>
+         </ul>
+     </nav>
+     <article>
+         <div id="loading"></div>
+         <div class="search-bar">
+            <select class="select-css" id="dist" name="dist">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+            <input type="button"  class="btn" value="Search" />
+         </div>
+         <div class="header hidden">
+             <h2>Normalized Difference Vegetation Index Data</h2>
+             <p></p>
+         </div>
+         <table class="table hidden">
+             <thead>
+                 <tr>
+                     <td>Year</td>
+                     <td>January</td>
+                     <td>February</td>
+                     <td>March</td>
+                     <td>April</td>
+                     <td>May</td>
+                     <td>June</td>
+                     <td>July</td>
+                     <td>August</td>
+                     <td>September</td>
+                     <td>October</td>
+                     <td>November</td>
+                     <td>December</td>
+                     <td>Average</td>
+                     <td>Std Dev</td>
+                 </tr>
+             </thead>
+             <tbody>
+             </tbody>
+         </table>
+     </article>
+     <script src="js/template.js"></script>
+     <script src="js/ndvi.js"></script>
+ </body>
+ 
+ </html>
+ 

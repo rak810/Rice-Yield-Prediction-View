@@ -1,0 +1,139 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-blue : rgb(26, 25, 25);
+    --purple :  #511281;
+    --green : #4ca1a3;
+    --torq : #a5e1ad;
+    --off-white : rgb(241, 240, 240);
+    --bx-white : rgb(223, 210, 210);
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    box-shadow: 1px 1px 15px var(--bx-white);
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0px 5%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+    width: 100%;
+}
+
+.navbar h3 {
+    flex-basis: 40%;
+    cursor: pointer;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar ul li:hover {
+    box-shadow: 1px 1px 10px var(--bx-white);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+.navbar ul li a:visited {
+    color: black;
+    border: 1px solid black;
+}
+
+.table {
+    
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 30px rgb(218, 216, 216);
+}
+
+td {
+    border-right: 1px solid var(--off-white);
+    border-bottom: 1px solid var(--off-white);
+    padding: 5px;
+}
+
+tbody tr:nth-of-type(2n) {
+    background: var(--bx-white);
+}
+
+article {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    min-height: 89.1%;
+    margin-bottom: 1vh;
+    position: relative;
+    margin-top: 5%;
+}
+
+article div {
+    height: 15%;
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.table {
+    transition: all 0.5s ease-in-out;
+}
+
+.table thead {
+    background-color: rgb(27, 23, 23);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#loading {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-top: 10vh;
+    transform: translate(-50%, -50%);
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid black;
+    border-radius: 100%;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
