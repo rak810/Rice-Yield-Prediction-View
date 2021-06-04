@@ -15,10 +15,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    overflow-x: hidden;
+
 }
 
 .navbar {
@@ -26,13 +23,8 @@ body {
     display:  flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 55px;
     padding: 0px 5%;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    z-index: 99;
-    width: 100%;
 }
 
 .navbar h3 {
@@ -43,14 +35,14 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    flex-basis: 50%;
+    flex-basis: 33.3%;
 }
 
 .navbar ul li {
     cursor: pointer;
     padding: 8px;
     border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar ul li:hover {
@@ -63,8 +55,8 @@ body {
 
 .navbar ul li a:visited {
     color: black;
-    border: 1px solid black;
 }
+
 
 .table {
     

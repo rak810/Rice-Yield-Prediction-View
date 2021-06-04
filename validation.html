@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link rel="stylesheet" href="css/validation.css" />
+    <title>Validate</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h3>Rice Yield Prediction</h3>
+      <ul>
+        <li><a href="index.html">Rice Yield</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="ndvi.html">NDVI</a></li>
+        <li><a href="validation.html">Validate</a></li>
+      </ul>
+    </nav>
+    <article>
+      <div class="grid-container">
+        <form action="" class="grid-item grid-item-1">
+            <div class="form-group form-item-1">
+                <label for="district">District</label>
+                <select class="select-css" id="dist" name="district">
+                  <!-- <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option> -->
+                </select>
+            </div>
+            <input type="button"  class="form-item-3 btn" value="Predict" />
+        </form>
+        <div id="loading"></div>
+        <div class="grid-item grid-item-2 hidden">
+            <h2>Results</h2>
+            <ul class="toggle">
+                <li class="aus">Aus</li>
+                <li class="aman">Aman</li>
+                <li class="boro">Boro</li>
+            </ul>
+            <div class="main">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>District</td>
+                            <td>Year</td>
+                            <td>Type</td>
+                            <td>Land (in hectares)</td>
+                            <td>Actual Yield</td>
+                            <td>Predicted Yield</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <!-- <tr>
+                            <td>Comilla</td>
+                            <td>2017</td>
+                            <td>Aman</td>
+                            <td>134459</td>
+                            <td>5453043</td>
+                            <td>3543534</td>
+                        </tr>
+                        <tr>
+                            <td>Comilla</td>
+                            <td>2017</td>
+                            <td>Aman</td>
+                            <td>134459</td>
+                            <td>5453043</td>
+                            <td>3543534</td>
+                        </tr>
+                        <tr>
+                            <td>Comilla</td>
+                            <td>2017</td>
+                            <td>Aman</td>
+                            <td>134459</td>
+                            <td>5453043</td>
+                            <td>3543534</td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+                <canvas class="graph">
+
+                </canvas>
+            </div>
+        </div>
+
+        </div>
+      </div>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script src="js/validation.js"></script>
+    <!-- <script src="js/template.js"></script>
+    <script src="js/script.js"></script> -->
+  </body>
+</html>
