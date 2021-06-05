@@ -1,10 +1,15 @@
+const months = ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
 function genTbody(tbody, data) {
 	const tr = document.createElement('tr');
 	Object.keys(data).forEach(function(val) {
 		
 		if(val !== 'lat' && val !== 'long') {
 			td = document.createElement('td');
-			if(val !== 'st' && val !== 'yr') {
+			if (val === 'mn') {
+				td.innerText = months[Number.parseInt(data[val])-1];
+			}
+			else if(val !== 'st' && val !== 'yr') {
 				td.innerText = Number.parseFloat(data[val]).toFixed(3);
 			}
 			else {
@@ -23,19 +28,21 @@ function processWeatherData(data, tbody) {
     parsedData = JSON.parse(data)
 	
 	Object.keys(parsedData).forEach(function(key) {
-		const obj1 = parsedData[key]
-		if (obj1['yr'] < 2021) {
-			genTbody(tbody, obj1)
-		} 
+		const obj1 = parsedData[key];
+		genTbody(tbody, obj1);
 	});
 
 }
 
 
-var getWeatherData = function (url, selectors, isTest) {
+var getWeatherData = function (url, selectors, postBody, isTest) {
 
 	fetch(url, {
-        method: 'GET'
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(postBody)
     }).then(function (response) {
 		if (response.ok) {
 			return response.json();
@@ -52,11 +59,12 @@ var getWeatherData = function (url, selectors, isTest) {
 			const tbody = selectors['tbody'];
 			const loader = selectors['loader'];
 			const header = selectors['header'];
-			const table = selectors['table'];
+			const main = selectors['main'];
+			tbody.ableinnerHTML = '';
 			processWeatherData(data, tbody);
+			header.childNodes[3].innerHTML = `${postBody['st']}, ${postBody['yr']}`;
+			main.classList.remove(['hidden']);
 			loader.classList.add(['hidden']);
-			header.classList.remove(['hidden']);
-			table.classList.remove(['hidden']);
 		}
 
 	}).catch(function (error) {

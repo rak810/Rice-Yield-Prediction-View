@@ -22,28 +22,55 @@
             <li><a href="validation.html">Validate</a></li>
         </ul>
     </nav>
+    
     <article>
         <div id="loading"></div>
-        <div class="header hidden">
-            <h2>Weather Data</h2>
-            <p>Yearly Average Weather From 2011 to 2020</p>
+        <div class="grid-container">
+            <form action="" class="grid-item grid-item-1">
+                <div class="form-group form-item-1">
+                    <label for="district">Weather Station</label>
+                    <select class="select-css" id="dist" name="district">
+                        <!-- <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option> -->
+                    </select>
+                </div>
+                <div class="form-group form-item-2">
+                    <label for="district">Year</label>
+                    <select class="select-css" id="year" name="year">
+                        <!-- <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option> -->
+                    </select>
+                </div>
+                <input type="button"  class="form-item-3 btn" value="Enter" />
+            </form>
+            <div class="grid-item-2 hidden">
+                <div class="header">
+                    <h2>Weather Data</h2>
+                    <p>Yearly Weather Data From 1990 to 2013</p>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>District</td>
+                            <td>Year</td>
+                            <td>Month</td>
+                            <td>Maximum Temperature</td>
+                            <td>Minimum Temperature</td>
+                            <td>Rainfall</td>
+                            <td>Relative Humidity</td>
+                            <td>Wind</td>
+                            <td>Cloud Coverage</td>
+                            <td>Sunshine</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <table class="table hidden">
-            <thead>
-                <tr>
-                    <td>District</td>
-                    <td>Year</td>
-                    <td>Average Temperature</td>
-                    <td>Average Rainfall</td>
-                    <td>Average Relative Humidity</td>
-                    <td>Average Cloud Coverage</td>
-                    <td>Average Sunshine</td>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
     </article>
     <script src="js/template.js"></script>
     <script src="js/weather.js"></script>
