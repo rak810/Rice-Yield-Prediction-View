@@ -158,7 +158,7 @@ function processPrediction(predData, selectors) {
 	selectors['area'].innerText = `${data['land']} hectares`;
 	selectors['rtype'].innerText = `${data['type']}`;
 	selectors['ndvi'].innerText = `${Number.parseFloat(data['ndvi']).toFixed(4)}`;
-	selectors['prod'].innerText = `${Number.parseFloat(data['prod']).toFixed(3)} m.ton`;
+	selectors['prod'].innerText = `${(Number.parseFloat(data['prod'])/1000).toFixed(3)} m.ton`;
 	selectors['rain'].innerText = `${Number.parseFloat(data['weather']['rain']).toFixed(3) } mm`;
 	selectors['rel_hum'].innerText = `${Number.parseFloat(data['weather']['rel_hum']).toFixed(3) } %`;
 	selectors['cloud'].innerText = `${Number.parseFloat(data['weather']['cloud']).toFixed(3) } okta`;
