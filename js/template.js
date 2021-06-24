@@ -60,7 +60,7 @@ var getWeatherData = function (url, selectors, postBody, isTest) {
 			const loader = selectors['loader'];
 			const header = selectors['header'];
 			const main = selectors['main'];
-			tbody.ableinnerHTML = '';
+			tbody.innerHTML = '';
 			processWeatherData(data, tbody);
 			header.childNodes[3].innerHTML = `${postBody['st']}, ${postBody['yr']}`;
 			main.classList.remove(['hidden']);
