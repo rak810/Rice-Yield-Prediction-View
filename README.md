@@ -7,4 +7,5 @@ This is an web application for the Rice Yield Prediction API. Following are the 
 ## Showing previous weather data for a location 
 ![Past Weather](screenshots/Weather.png)
 ## Comparison between previous data and prediction
+Chart was created using [Chart.js](https://www.chartjs.org/)
 ![Validation](screenshots/Validate.png)
